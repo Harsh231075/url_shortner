@@ -45,11 +45,13 @@ A full-stack URL shortener application built with **React**, **Node.js**, and **
 
 | Method | Endpoint           | Description                          |
 |--------|--------------------|--------------------------------------|
-| POST   | `/api/shorten`     | Create short URL                     |
+| POST   | `/shorten`         | Create short URL                     |
 | GET    | `/:code`           | Redirect to long URL                 |
 | GET    | `/stats/:code`     | Get click stats                      |
 | GET    | `/my/urls`         | Fetch user-specific shortened URLs   |
+| GET    | `/me`              | Fetch user-specific details          |
 | DELETE | `/url/:id`         | Delete a shortened URL               |
+
 
 ---
 
@@ -58,7 +60,7 @@ A full-stack URL shortener application built with **React**, **Node.js**, and **
 ### 🔧 1. Clone the Repository
 
 ```bash
-git clone https://github.com/harshbaghel123/url_shortner.git
+git clone https://github.com/Harsh231075/url_shortner.git
 cd url_shortner
 
 📦 2. Setup Backend
