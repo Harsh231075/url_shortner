@@ -6,8 +6,7 @@ A full-stack URL shortener application built with **React**, **Node.js**, and **
 
 ## 🚀 Live Demo
 
-🌐 Frontend (Vercel): [https://url-shortner-b67x.vercel.app](https://url-shortner-b67x.vercel.app)
-
+🌐Frontend (Vercel): [https://url-shortner-lemon-rho.vercel.app/](https://url-shortner-lemon-rho.vercel.app/)
 ---
 
 ## 🧠 Tech Stack
