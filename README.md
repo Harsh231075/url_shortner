@@ -45,6 +45,8 @@ A full-stack URL shortener application built with **React**, **Node.js**, and **
 
 | Method | Endpoint           | Description                          |
 |--------|--------------------|--------------------------------------|
+| POST   | `/auth/register`   | Register a new user                  |
+| POST   | `/auth/login`      | Login and receive JWT token          |
 | POST   | `/shorten`         | Create short URL                     |
 | GET    | `/:code`           | Redirect to long URL                 |
 | GET    | `/stats/:code`     | Get click stats                      |
