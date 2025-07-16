@@ -1,5 +1,6 @@
 import { create } from 'zustand';
 import axios from 'axios';
+import { toast } from 'react-hot-toast';
 
 export const useUrlStore = create((set, get) => ({
   url: '',
@@ -13,13 +14,13 @@ export const useUrlStore = create((set, get) => ({
     const url = get().url;
 
     if (!token) {
-      alert("Please log in to shorten URLs.");
+      toast.error("Please log in to shorten URLs.");
       window.location.href = '/login'; //  use window.location
       return;
     }
 
     if (!url) {
-      alert("Please enter a URL.");
+      toast.error("Please enter a URL.");
       return;
     }
 
@@ -37,12 +38,13 @@ export const useUrlStore = create((set, get) => ({
       );
 
       const shortUrl = res.data.shortUrl;
+      //console.log('Short URL created:', shortUrl);
       set({ shortUrl });
 
-      alert(`Short URL created: ${shortUrl}`);
+      toast.success("Link Created!");
     } catch (error) {
       console.error(' Error creating short URL:', error);
-      alert(error.response?.data?.message || 'Something went wrong');
+      toast.error(error.response?.data?.message || 'Something went wrong');
     } finally {
       set({ loading: false });
     }

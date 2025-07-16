@@ -12,7 +12,7 @@ export const shortenUrl = async (req, res) => {
     }
 
     // Generate a unique short code
-    const shortCode = nanoid(6); // like "Ab12xY"
+    const shortCode = nanoid(6);
 
     const newUrl = new Url({
       originalUrl,
@@ -22,9 +22,11 @@ export const shortenUrl = async (req, res) => {
 
     await newUrl.save();
 
+    console.log('Short URL created:', `${process.env.BASE_URL} + /${shortCode}`);
+
     return res.status(201).json({
       message: 'Short URL created successfully',
-      shortUrl: `${process.env.BASE_URL}/${shortCode}`, // example: https://short.ly/Ab12xY
+      shortUrl: `${process.env.BASE_URL}/${shortCode}`,
     });
   } catch (error) {
     console.error('Shorten URL error:', error);

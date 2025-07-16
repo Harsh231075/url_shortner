@@ -15,7 +15,7 @@ const data = [
   },
   {
     icon: Shield,
-    title: "Private Dashboard for Users",
+    title: "Private Profile for Users",
     description: "Secure personal dashboard to manage all your links, view analytics, and customize settings.",
     color: "from-green-400 to-emerald-500"
   }
